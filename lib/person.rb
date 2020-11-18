@@ -1,7 +1,7 @@
 require 'pry'
 class Person
 
-    total = 0
+    happiness = 0
 
     attr_accessor :bank_account, :happiness
     attr_reader :name
@@ -14,9 +14,14 @@ class Person
     def happiness=(happiness)
         #binding.pry
         if happiness <= 10 
-            @happiness = happiness 
-
+            @happiness = happiness
+        elsif happiness > 10
+            @happiness = 10
+        else 
+            @happiness = 0
+            #binding.pry
         end
+        #@happiness
     end
 
     
@@ -30,7 +35,7 @@ class Person
 end
 
 
-person = Person.new("Raul")
+#person = Person.new("Raul")
 #binding.pry
 # your code goes here
 0
