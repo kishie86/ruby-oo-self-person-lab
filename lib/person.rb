@@ -12,8 +12,10 @@ class Person
     end
 
     def happiness=(happiness)
-        binding.pry
-        if @happiness 
+        #binding.pry
+        if happiness <= 10 
+            @happiness = happiness 
+
         end
     end
 
@@ -29,6 +31,6 @@ end
 
 
 person = Person.new("Raul")
-binding.pry
+#binding.pry
 # your code goes here
 0
